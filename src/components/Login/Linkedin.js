@@ -20,8 +20,8 @@ const App = () => {
     };
 
     // const redirecturi = "http://localhost:3000/linkedin"
-    const redirecturi = "https://sociophin.netlify.app/linkedin"
-    const urlencoded = "https%3A%2F%2Fsociophin.netlify.app%2Flinkedin"
+    const redirecturi = "https://main.d3n22laf955pa1.amplifyapp.com/linkedin"
+    const urlencoded = "https%3A%2F%2Fmain.d3n22laf955pa1.amplifyapp.com%2Flinkedin"
     // const urlencoded = "http%3A%2F%2Flocalhost%3A3000%2Flinkedin"
     const clientid = "782lxko1czd0k0"
     const clientsecret = "5yv3xigfyzedLIT4"

@@ -12,6 +12,13 @@ function Index() {
           <div className="d-flex">
             {/* <button className="btn shadow ttn btn-primary">Download</button>
             <button className="btn ttn btn-outline-primary w-8">Contact Us</button> */}
+             <img
+              width="6%"
+              className="shadow m-2"
+              src="logo-meta.png"
+              alt=""
+              srcset=""
+            />
             <img
               width="6%"
               className="shadow m-2"
@@ -23,13 +30,6 @@ function Index() {
               width="6%"
               className="shadow m-2"
               src="linkedin.png"
-              alt=""
-              srcset=""
-            />
-            <img
-              width="6%"
-              className="shadow m-2"
-              src="logo-meta.png"
               alt=""
               srcset=""
             />

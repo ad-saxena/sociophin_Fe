@@ -2,7 +2,7 @@
   "name": "sociophin",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:4000",
+  "proxy": "http://54.91.106.44:4000",
   "dependencies": {
     "@material-ui/core": "^4.12.2",
     "@testing-library/jest-dom": "^5.14.1",
@@ -25,6 +25,7 @@
     "react-time-picker": "^4.4.4",
     "react-twitter-login": "^1.4.0",
     "recoil": "^0.3.1",
+    "stringify": "^5.2.0",
     "twit": "^2.2.11",
     "twitter": "^1.7.1",
     "web-vitals": "^1.1.2"

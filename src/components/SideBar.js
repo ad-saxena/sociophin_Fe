@@ -51,28 +51,34 @@ function SideBar() {
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <Link
-                  to="/post"
+                  to="/twitter"
                   className="nav-link text-decoration-none m-auto"
                 >
-                  <li className="my-4 nav-item">Instagram</li>
+                  <li className="">Twitter</li>
                 </Link>
                 <Link
-                  to="/post"
+                  to="/instagram"
                   className="nav-link text-decoration-none m-auto"
                 >
-                  <li className="my-4 nav-item">Facebook</li>
+                  <li className="">Instagram</li>
                 </Link>
                 <Link
-                  to="/post"
+                  to="/facebook"
                   className="nav-link text-decoration-none m-auto"
                 >
-                  <li className="my-4 nav-item">LinkedIn</li>
+                  <li className="">Facebook</li>
+                </Link>
+                <Link
+                  to="/linkedin"
+                  className="nav-link text-decoration-none m-auto"
+                >
+                  <li className="">LinkedIn</li>
                 </Link>
                 <Link
                   to="/marketing"
                   className="nav-link text-decoration-none m-auto"
                 >
-                  <li className="my-4 nav-item">Marketing</li>
+                  <li className="">Marketing</li>
                 </Link>
 
                 <Link
@@ -86,20 +92,6 @@ function SideBar() {
                     >
                       Create New Post
                     </button>
-                    <button
-                      type="button"
-                      className="btn btn-sm btn-warning dropdown-toggle dropdown-toggle-split text-light"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span className="visually-hidden">Toggle Dropdown</span>
-                    </button>
-                    <ul className="dropdown-menu">
-                      <option className="dropdown-item">Upload</option>
-                      <option className="dropdown-item">
-                        Upload IGTV Video
-                      </option>
-                    </ul>
                   </div>
                 </Link>
               </ul>

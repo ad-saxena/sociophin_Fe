@@ -26,7 +26,7 @@ const LastMail = () => {
         `https://5k3xbanutb.execute-api.us-east-1.amazonaws.com/dev/api/getUserDetails/${userdbuid}`
       )
       .then((res) => {
-        // console.log(res.data[0]);
+        console.log(res.data);
         setuser(res.data[0]);
       });
   }, [userdbuid]);

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import axios from "axios";
 const LatestPost = () => {
-    const [user, setuser] = useState([]);
+    const [user, setuser] = useState(null);
 
     useEffect(() => {
 
@@ -14,37 +14,39 @@ const LatestPost = () => {
     useEffect(() => {
         axios
             .get(
-                `/api/getUserId/username=sociophin`
+                `/api/getTrends`
             )
             .then((response) => {
-                console.log(response);
-                setuser(response.data.data)
+                // console.log(response.data[0].trends);
+                setuser(response.data[0].trends)
             });
     }, []);
 
 
 
     return (
-        <Table hover className="posttable">
-            <thead>
-                <tr>
-                    <th>SNo</th>
-                    <th>Post</th>
-                    <th>Post Status</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Likes</th>
-                    <th>Comment</th>
-                </tr>
-            </thead>
-            <tbody>
-                {/* {user.map((data, index) => (
-                    <tr>
-                        <td></td>
-                    </tr>
-                ))} */}
-            </tbody>
-        </Table>
+        <>
+            {user &&
+                <Table hover className="posttable">
+                    <thead>
+                        <tr>
+                            <th>SNo</th>
+                            <th>Tweet</th>
+                            <th>Tweet Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {user.map((data, index) => (
+                            <tr>
+                                <td>{index}</td>
+                                <td>{data.name}</td>
+                                <td><a href={data.url} className="text-decoration-none">View Tweet</a></td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </Table>
+            }
+        </>
     );
 };
 

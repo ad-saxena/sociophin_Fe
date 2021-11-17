@@ -12,8 +12,8 @@ const LatestPost = () => {
                 `/api/getUserId/username=sociophin`
             )
             .then((response) => {
-                console.log(response);
-                console.log(response.data.data.public_metrics.followers_count);
+                // console.log(response);
+                // console.log(response.data.data.public_metrics.followers_count);
                 setuser(response.data.data)
             });
     }, []);

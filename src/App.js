@@ -42,7 +42,7 @@ function App() {
     <Router>
       <div className="">
         <Header user={user} />
-        <div className="main container-fluid">
+        <div className="mt-5 main container-fluid">
           <Switch>
             <Route path="/" exact render={() => <Index />} />
             {user && (

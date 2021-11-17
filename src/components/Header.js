@@ -61,6 +61,9 @@ const Header = ({ user }) => {
                   onClick={() => {
                     signOutUser();
                     localStorage.removeItem("dbuseruid");
+                    localStorage.removeItem("fbaccesstoken");
+                    localStorage.removeItem("fbuseruid");
+                    localStorage.removeItem("fbpageid");
                   }}
                 >
                   SignOut

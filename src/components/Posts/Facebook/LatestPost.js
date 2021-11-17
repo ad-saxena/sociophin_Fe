@@ -59,7 +59,7 @@ const LatestPost = ({
     // }
   }, [page_id, accessid]);
   return (
-    <Table bordered hover className="posttable">
+    <Table hover className="posttable">
       <thead>
         <tr>
           <th>SNo</th>

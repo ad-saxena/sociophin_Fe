@@ -27,12 +27,16 @@ const Saved = ({ email, profilepic, name, msg, setmsg }) => {
       .then((res) => setQuickReply(res.data));
   };
   const addQuickReply = () => {
-    axios
-      .post(
-        "https://5k3xbanutb.execute-api.us-east-1.amazonaws.com/dev/api/createCustomReply",
-        { userId: uid, message: newReply }
-      )
-      .then((res) => setNewReply(""));
+    if (newReply) {
+      axios
+        .post(
+          "https://5k3xbanutb.execute-api.us-east-1.amazonaws.com/dev/api/createCustomReply",
+          { userId: uid, message: newReply }
+        )
+        .then((res) => setNewReply(""));
+    } else {
+      alert("Please Enter a Valid Message")
+    }
   };
   const deleteQuickReply = (Id) => {
     console.log("uid", uid);
@@ -85,7 +89,7 @@ const Saved = ({ email, profilepic, name, msg, setmsg }) => {
                   handleClose();
                 }}
                 className="col-lg-10"
-                // className="quick_reply"
+              // className="quick_reply"
               >
                 {reply.message}
               </span>
@@ -99,9 +103,9 @@ const Saved = ({ email, profilepic, name, msg, setmsg }) => {
           ))}
         </div>
         <center>
-        <button
+          <button
             className="btn btn-sm btn-warning rounded-pill text-light text-center mt-1"
-            style={{fontSize:".7em"}}
+            style={{ fontSize: ".7em" }}
             onClick={() => {
               handleShow();
               // setTo(data.emailId);
@@ -126,7 +130,7 @@ const Saved = ({ email, profilepic, name, msg, setmsg }) => {
                     handleClose();
                   }}
                   className="col-lg-10"
-                  // className="quick_reply"
+                // className="quick_reply"
                 >
                   {reply.message}
                 </span>

@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -6,7 +5,7 @@ const Comments = (props) => {
   const [comments, setcomments] = useState([]);
   const [textInput, setTextInput] = React.useState("");
   const accessid = localStorage.getItem("fbaccesstoken");
-  
+
   useEffect(() => {
     getComments();
   }, [props.selectpostid]);
@@ -49,14 +48,14 @@ const Comments = (props) => {
   }
 
   return (
-    <div className="comments">
+    <div className="">
       <div className="post-head">
         <h5>Comments</h5>
       </div>
-      <div className="">
+      <div className="mycomments w-100">
         {comments.length
           ? comments.map((comment, idx) => (
-            <ul key={idx} className="list-unstyled">
+              <ul key={idx}>
                 <li>
                   <div className="comment">
                     <b>{comment.from && comment.from.name}:</b>
@@ -67,9 +66,9 @@ const Comments = (props) => {
                     ? comment.comments.data.length
                       ? comment.comments.data.map(
                           (commenters, idx) => (
-                          <ul className="list-unstyled">
+                            <ul>
                               {/* <div className="reply-txt">Replies :</div> */}
-                              <li className="w-90">
+                              <li>
                                 <div className="replies">
                                   <b>{comment.from && comment.from.name}:</b>:
                                   <br />
@@ -92,11 +91,10 @@ const Comments = (props) => {
                         placeholder="Reply to the above comment"
                       ></input>
                     </div>
-                    <div className="col col-md-4">
+                    <div className="col col-md-4 d-flex align-items-center">
                       <button
-                        className="btn btn-warning text-light btn-reply"
+                        className="btn btn-warning btn-reply"
                         onClick={() => {
-                          console.log(comment.id);
                           postreply(comment.id);
                         }}
                       >
@@ -112,10 +110,6 @@ const Comments = (props) => {
           : "Click on the post to view comments"}
       </div>
     </div>
-
-    // <div>
-
-    // </div>
   );
 };
 

@@ -41,21 +41,11 @@ const LatestMessage = () => {
         posts.map((post) => (
           <Link to={`/chat/${post.id}`} className="chat" key={post.id}>
             <div className=" d-flex align-items-center justify-content-between">
-              <div className="d-flex my-2">
-                {/* <img
-                  src={linkedin}
-                  alt="pic"
-                  style={{ height: "3em" }}
-                  className="rounded-circle"
-                /> */}
-                <div className="mx-2 pt-1">
+              <div className="my-2 border-bottom py-2 w-100">
                   <h3 className="text-black sender_name">
                     {post.senders.data[0].name}
                   </h3>
-                  {/* <h4 className="text-secondary latest_msg">
-                    Latest Message asjdkjj
-                  </h4> */}
-                </div>
+            
               </div>
               {/* <div
                 className="bg-warning rounded-circle d-flex justify-content-center"
@@ -64,7 +54,6 @@ const LatestMessage = () => {
                 <span className="text-white fs-6">4</span>
               </div> */}
             </div>
-            <hr></hr>
           </Link>
         ))
       ) : userid ? (

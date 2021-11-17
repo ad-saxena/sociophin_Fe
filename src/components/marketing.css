@@ -1,0 +1,27 @@
+.mail_subject{
+    height: 45vh;
+    overflow-y: scroll;
+}
+.addemail{
+    height: 35vh;
+    overflow-y: scroll;
+}
+.emails{
+    height: 35vh;
+    overflow-y: scroll;
+}
+@media screen and (max-width:768px){
+    .mail_subject td,.mail_subject th{
+        font-size: 0.8em;
+    }
+    .addemail label{
+        font-size: 0.8em;
+    }
+    .emails td,.emails th{
+        font-size: 0.8em;
+    }
+    .emails,.addemail{
+        width:100vw;
+    }
+
+}

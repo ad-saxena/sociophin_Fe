@@ -1,0 +1,32 @@
+.header{
+  background-color: #fff;
+}
+
+.sidebar {
+  display: none;
+}
+.text-sidebar{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: auto;
+}
+.text-sidebar a {
+  color: #202020;
+}
+.text-sidebar a:hover {
+  color: #bd8906;
+}
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: flex;
+  }
+  .header{
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header h5 {
+    font-size: 0.8em;
+  }
+}

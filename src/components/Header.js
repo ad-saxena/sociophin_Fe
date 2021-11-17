@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import SideBar from "./SideBar";
 import { signOutUser } from "../firebase";
 // import { useHistory } from "react-router-dom";
-
+import logo from "./assets/logo.png"
 const Header = ({ user }) => {
   // const history = useHistory()
   // const tab = window.location.href.split("/")[3];
@@ -16,14 +16,21 @@ const Header = ({ user }) => {
         <nav className="sticky-top top-0 d-flex align-items-center w-100 py-2">
           <div className="flex-grow-1 w-25 px-4">
             <Link to="/" className="text-decoration-none">
-              <h5 className="text-uppercase text-decoration-none my-auto">
-                Social crm
-              </h5>
+              {/* <h5 className="text-uppercase text-decoration-none my-auto">
+                SpcioPhin
+              </h5> */}
+              <img width="12%" src={logo} alt="logo" />
             </Link>
           </div>
           <ul className="list-unstyled text-sidebar">
             {user ? (
               <>
+                {/* <Link
+                  to="/twitter"
+                  className="text-decoration-none text-center mx-3"
+                >
+                  <li className="">Twitter</li>
+                </Link> */}
                 <Link
                   to="/instagram"
                   className="text-decoration-none text-center mx-3"

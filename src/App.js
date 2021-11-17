@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 // import Post from "./pages/Post";
 import Facebook from "./pages/Facebook";
 import Linkedin from "./pages/Linkedin";
+import Twitter from "./pages/Twitter";
 import Newpost from "./pages/Newpost";
 import Marketing from "./pages/Marketing";
 import Chat from "./pages/Chat";
@@ -39,7 +40,7 @@ function App() {
 
   return (
     <Router>
-      <div className="d-flex flex-column">
+      <div className="">
         <Header user={user} />
         <div className="main container-fluid">
           <Switch>
@@ -47,8 +48,8 @@ function App() {
             {user && (
               <>
                 <Route path="/facebook" exact render={() => <Facebook />} />
-                <Route path="/instagram" exact render={() => <Facebook />} />
-                <Route path="/linkedin/" render={() => <Linkedin />} />
+                <Route path="/instagram" exact render={() => <h1 className="d-flex justify-content-center align-items-center h-100 w-100" style={{ "font-size": "6rem", color: "#FFCA2C" }}>Coming Soon!</h1>} />
+                <Route path="/linkedin" exact render={() => <h1 className="d-flex justify-content-center align-items-center h-100 w-100" style={{ "font-size": "6rem", color: "#FFCA2C" }}>Coming Soon!</h1>} />
                 <Route path="/newpost" exact render={() => <Newpost />} />
                 <Route path="/marketing" exact render={() => <Marketing />} />
                 <Route path="/chat" exact render={() => <Chat />} />

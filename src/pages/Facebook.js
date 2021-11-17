@@ -70,25 +70,7 @@ function Post() {
       {/* {updated && ( */}
       <div className=" px-5 pt-3 h-100">
         <div className="row">
-          <div className="d-flex justify-content-between px-0">
-            <div className="btn-group">
-              <button className="btn btn-light btn-sm" type="button">
-                Post Status
-              </button>
-              <button
-                type="button"
-                className="btn btn-sm btn-warning dropdown-toggle dropdown-toggle-split"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <span className="visually-hidden">Toggle Dropdown</span>
-              </button>
-              <ul className="dropdown-menu">
-                <option className="dropdown-item">All</option>
-                <option className="dropdown-item">Filter</option>
-                <option className="dropdown-item">Filter</option>
-              </ul>
-            </div>
+          <div className="d-flex justify-content-end px-0">
             <div className="">
               <Link
                 to="/newpost"
@@ -103,22 +85,22 @@ function Post() {
                   </button>
                   <button
                     type="button"
-                    className="btn btn-sm btn-warning dropdown-toggle dropdown-toggle-split text-light"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                    className="btn btn-sm btn-warning text-light"
+                    // data-bs-toggle="dropdown"
+                    // aria-expanded="false"
                   >
-                    <span className="visually-hidden">Toggle Dropdown</span>
+                    {/* <span className="visually-hidden">Toggle Dropdown</span> */}
                   </button>
-                  <ul className="dropdown-menu">
+                  {/* <ul className="dropdown-menu">
                     <option className="dropdown-item">Upload</option>
                     <option className="dropdown-item">Upload IGTV Video</option>
-                  </ul>
+                  </ul> */}
                 </div>
               </Link>
-              <button className="btn btn-light btn-sm">See All</button>
+              {/* <button className="btn btn-light btn-sm">See All</button> */}
             </div>
           </div>
-          <div className=" col-lg-12 border p-3 bg-light my-2 mx-auto rounded shadow-sm post">
+          <div className="col-lg-12 border p-3 bg-light my-2 mx-auto rounded shadow-sm post">
             <LatestPost
               setisLoggedin={setisLoggedin}
               selectedpostcomments={selectpostcomments}
@@ -128,7 +110,7 @@ function Post() {
             />
           </div>
           <div className="col-lg-12  container-fluid d-flex flex-wrap justify-content-between align-items-center p-0">
-            <div className="col-lg-5 border bg-light my-2 rounded shadow-sm message">
+            <div className="col-lg-6 border bg-light my-2 rounded shadow-sm message">
               <LatestMessage />
             </div>
             <div className="col-lg-6 border p-3 bg-light  my-2 rounded shadow-sm comment_box">

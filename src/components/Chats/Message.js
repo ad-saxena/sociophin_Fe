@@ -15,7 +15,7 @@ const Message = ({ isPrimary, pdata, profilepic, convertToLocalTime }) => {
             />
           </div>
           <div className="dm d-flex flex-column">
-            <div className="specific_chat_primary p-2 shadow">{pdata.message}</div>
+            <div className="specific_chat_primary p-2 shadow-sm">{pdata.message}</div>
             <span className="chat_time align-self-end mt-1">
               {convertToLocalTime(pdata.created_time)}
             </span>
@@ -24,7 +24,7 @@ const Message = ({ isPrimary, pdata, profilepic, convertToLocalTime }) => {
       ) : (
         <div className="d-flex align-items-end my-4 justify-content-end">
           <div className="dm d-flex flex-column">
-            <div className="specific_chat p-2 shadow">{pdata.message}</div>
+            <div className="specific_chat p-2 shadow-sm">{pdata.message}</div>
             <span className="chat_time align-self-end mt-1">
               {convertToLocalTime(pdata.created_time)}
             </span>

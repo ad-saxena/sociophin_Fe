@@ -6,10 +6,11 @@ import axios from "axios";
 // import { access_token, pageid, uid } from "../../GlobalState";
 
 // import linkedin from "../assets/linkedin.png";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 // import "./posts.css";
 
 const LatestMessage = () => {
+  const history=useHistory()
   // const [item, setItem] = useState("");
   // const [data,setData] = useState("")
   const [posts, setPosts] = useState([]);
@@ -31,28 +32,31 @@ const LatestMessage = () => {
 
   return (
     <div className="d-flex flex-column relative p-3">
+      <button className="btn btn-sm btn-warning text-light rounded w-25" onClick={()=>history.goBack()}>
+        Back
+      </button>
       <div className="sticky-top top-0 bg-light m-0 pt-2">
-        <h5 className="">Latest Messages</h5>
+        <h5 className="">Direct Messages</h5>
       </div>
       {posts.length ? (
         posts.map((post) => (
           <Link to={`/chat/${post.id}`} className="chat" key={post.id}>
             <div className=" d-flex align-items-center justify-content-between">
-              <div className="d-flex my-2">
+              <div className="border-bottom py-2 my-2 w-100">
+                <h3 className="text-black sender_name">
+                  {post.senders.data[0].name}
+                </h3>
                 {/* <img
                   src={linkedin}
                   alt="pic"
                   style={{ height: "3em" }}
                   className="rounded-circle"
                 /> */}
-                <div className="mx-2 pt-1">
-                  <h3 className="text-black sender_name">
-                    {post.senders.data[0].name}
-                  </h3>
-                  {/* <h4 className="text-secondary latest_msg">
+                {/* <div className="mx-2 pt-1"> */}
+                {/* <h4 className="text-secondary latest_msg">
                     Latest Message asjdkjj
                   </h4> */}
-                </div>
+                {/* </div> */}
               </div>
               {/* <div
                 className="bg-warning rounded-circle d-flex justify-content-center"
@@ -61,7 +65,7 @@ const LatestMessage = () => {
                 <span className="text-white fs-6">4</span>
               </div> */}
             </div>
-            <hr></hr>
+            {/* <hr className=""></hr> */}
           </Link>
         ))
       ) : userid ? (

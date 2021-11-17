@@ -38,7 +38,7 @@ const Dm = ({
           <p className="m-0 text-secondary">{email}</p>
         </div>
       </div>
-      <div className="py-3 px-2 w-100" style={{overflowY:"scroll"}}>
+      <div className="py-3 px-2 h-100 w-100" style={{overflowY:"scroll",background:"#e3e3e3"}}>
         <div className="w-100">
           {mymessage.length
             ? mymessage.map((pdata, idx) => (

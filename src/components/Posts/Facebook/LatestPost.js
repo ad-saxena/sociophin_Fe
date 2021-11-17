@@ -6,7 +6,7 @@ import dot from "../../assets/dot.png";
 import { Table } from "react-bootstrap";
 import axios from "axios";
 import "./posts.css";
-
+import Likes from "./Likes"
 const LatestPost = ({
   isLoggedin,
   selectedpostcomments,
@@ -31,9 +31,9 @@ const LatestPost = ({
   const likes = (id) => {
     other.filter((other) => {
       if (other.id === id) {
-        console.log()
-        return other.likes.data.length;
-      }
+        // console.log(other.likes.data.length)
+        return parseInt(other.likes.data.length)
+      } else { return 0; }
     });
   };
 
@@ -69,7 +69,7 @@ const LatestPost = ({
           <th>Time</th>
           <th>Likes</th>
           <th>Comment</th>
-          <th>Reach</th>
+          {/* <th>Reach</th> */}
         </tr>
       </thead>
       <tbody>
@@ -101,10 +101,10 @@ const LatestPost = ({
                 </td>
               </>
             )}
-            {console.log(likes(data.id))}
-            <td>{parseInt(likes(data.id))}</td>
-            {data.comments && <td>{data.comments.data.length}</td>}
-            <td>1000</td>
+            {/* {console.log(likes(data.id))} */}
+            <Likes id={data.id} other={other} />
+            {data.comments ? <td>{data.comments.data.length}</td> : <td>No Comments</td>}
+            {/* <td>100</td> */}
             <td>
               <div className="dropdown">
                 <button

@@ -88,9 +88,9 @@ const Chat = () => {
   // console.log("this  is message", mymessage);
 
   return (
-    <main className="container-fluid px-5 h-100">
+    <main className="container-fluid px-5 h-100 my-auto">
       <div className="row h-100">
-        <div className="col-lg-8 bg-light shadow rounded my-2 h-100">
+        <div className="col-lg-8 bg-light shadow-sm rounded my-2 h-100">
           <div className="row h-100">
             <div className="col-lg-4">
               <Names />

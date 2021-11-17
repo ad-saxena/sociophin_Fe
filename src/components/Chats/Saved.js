@@ -49,7 +49,7 @@ const Saved = ({ email, profilepic, name, msg, setmsg }) => {
   }, [quickReply]);
   return (
     <div className="d-flex flex-column justify-content-center align-content-between h-100">
-      <div className="bg-light rounded shadow my-auto p-3">
+      <div className="bg-light rounded shadow-sm my-auto p-3">
         <div className="d-flex justify-content-center">
           <img
             src={profilepic}
@@ -63,10 +63,10 @@ const Saved = ({ email, profilepic, name, msg, setmsg }) => {
           <p className="text-center">{email}</p>
         </div>
       </div>
-      <div className="bg-light rounded shadow my-auto p-3 saved">
-        <div className="d-flex justify-content-center">
-          <h5 className="">Saved Messages</h5>{" "}
-          <button
+      <div className="bg-light rounded shadow-sm my-auto px-3 pt-3 pb-1 saved w-100">
+        <div className="d- justify-content-between">
+          <h5 className="">Saved Messages</h5>
+          {/* <button
             className="btn btn-sm btn-warning rounded-pill text-light mx-3"
             onClick={() => {
               handleShow();
@@ -74,7 +74,7 @@ const Saved = ({ email, profilepic, name, msg, setmsg }) => {
             }}
           >
             Add Quick Reply
-          </button>
+          </button> */}
         </div>
         <div className="quick">
           {quickReply.map((reply, i) => (
@@ -98,6 +98,19 @@ const Saved = ({ email, profilepic, name, msg, setmsg }) => {
             </div>
           ))}
         </div>
+        <center>
+        <button
+            className="btn btn-sm btn-warning rounded-pill text-light text-center mt-1"
+            style={{fontSize:".7em"}}
+            onClick={() => {
+              handleShow();
+              // setTo(data.emailId);
+            }}
+          >
+            Add Quick Reply
+          </button>
+
+        </center>
       </div>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

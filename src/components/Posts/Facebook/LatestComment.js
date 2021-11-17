@@ -69,7 +69,7 @@ const Comments = (props) => {
                           (commenters, idx) => (
                           <ul className="list-unstyled">
                               {/* <div className="reply-txt">Replies :</div> */}
-                              <li>
+                              <li className="w-90">
                                 <div className="replies">
                                   <b>{comment.from && comment.from.name}:</b>:
                                   <br />

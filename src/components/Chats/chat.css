@@ -1,5 +1,5 @@
-.saved li{
-    font-size: 0.9em;
+.saved {
+    height: 40vh;
 }
 .quick_reply{
     padding: .5em 1em;
@@ -42,10 +42,11 @@
 }
 .send_button{
     border: none;
+    background: none;
 }
 
 .quick{
-    height:20vh;
+    height:27vh;
     overflow:auto;
 }
 

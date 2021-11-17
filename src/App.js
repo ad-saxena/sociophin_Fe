@@ -50,6 +50,7 @@ function App() {
                 <Route path="/facebook" exact render={() => <Facebook />} />
                 <Route path="/instagram" exact render={() => <h1 className="d-flex justify-content-center align-items-center h-100 w-100" style={{ "font-size": "6rem", color: "#FFCA2C" }}>Coming Soon!</h1>} />
                 <Route path="/linkedin" exact render={() => <h1 className="d-flex justify-content-center align-items-center h-100 w-100" style={{ "font-size": "6rem", color: "#FFCA2C" }}>Coming Soon!</h1>} />
+                <Route path="/twitter" exact render={() => <Twitter/>} />
                 <Route path="/newpost" exact render={() => <Newpost />} />
                 <Route path="/marketing" exact render={() => <Marketing />} />
                 <Route path="/chat" exact render={() => <Chat />} />

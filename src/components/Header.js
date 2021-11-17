@@ -6,10 +6,6 @@ import { signOutUser } from "../firebase";
 // import { useHistory } from "react-router-dom";
 import logo from "./assets/logo.png"
 const Header = ({ user }) => {
-  // const history = useHistory()
-  // const tab = window.location.href.split("/")[3];
-  // console.log(tab);
-
   return (
     <>
       <header className="header vw-90">
@@ -25,12 +21,12 @@ const Header = ({ user }) => {
           <ul className="list-unstyled text-sidebar">
             {user ? (
               <>
-                {/* <Link
+                <Link
                   to="/twitter"
                   className="text-decoration-none text-center mx-3"
                 >
                   <li className="">Twitter</li>
-                </Link> */}
+                </Link>
                 <Link
                   to="/instagram"
                   className="text-decoration-none text-center mx-3"

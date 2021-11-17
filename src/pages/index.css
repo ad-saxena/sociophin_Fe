@@ -11,7 +11,7 @@
         font-weight: 600;
       }
       .mar-12{
-        margin-left: 7rem;
+        margin-left: 12rem;
       }
       .mar-l{
         margin-left: 5rem ;
@@ -22,6 +22,12 @@
       }
       .w-8{
         width: 8rem;
+      }
+      .w-13{
+        width: 13rem;
+      }
+      .w-2{
+        width: 3rem;
       }
       .sha{
         box-shadow: 0 .3rem 0rem rgba(0,0,0,.15)!important;

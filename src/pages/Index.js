@@ -5,12 +5,13 @@ function Index() {
   return (
     <>
       <div class="d-flex align-items-center mt-mb-2  p-4">
-        <div class="pop mar-l">
+        <div class="pop mar-l w-13">
           <h1>Sociophin</h1>
           <p>One tap social marketing Solution</p>
           <div class="d-flex">
-            <button class="btn shadow ttn btn-primary">Download</button>
-            <button class="btn ttn btn-outline-primary w-8">Contact Us</button>
+          <img class="shadow m-2 w-2" src="envelope.png" alt="" srcset=""/>
+          <img class="shadow m-2 w-2" src="linkedin.png" alt="" srcset=""/>
+          <img class="shadow m-2 w-2" src="logo-meta.png" alt="" srcset=""/>
           </div>
         </div>
         <div class="mar-12">

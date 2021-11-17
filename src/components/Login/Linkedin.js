@@ -4,6 +4,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 // import { LinkedIn } from "react-linkedin-login-oauth2";
 // import { useLinkedIn } from "react-linkedin-login-oauth2";
+
 const App = () => {
     const [code, setcode] = useState("");
     const [accesscode, setaccesscode] = useState("");
@@ -51,7 +52,7 @@ const App = () => {
 
     const getAccessToken = (code) => {
         const url = `https://www.linkedin.com/oauth/v2/accessToken?grant_type=authorization_code&code=${code}&redirect_uri=${urlencoded}&client_id=${clientid}&client_secret=${clientsecret}`
-        axios.put(url, { headers: { "Access-Control-Allow-Origin": "*" } }).then(data => { console.log(data); setaccesscode(data.access_token); localStorage.setItem('liaccesstoken', data.access_token) }).catch(err => console.log(err))
+        axios.put(url, { headers: { "Access-Control-Allow-Origin": "*", " Access- Control - Allow - Methods": "POST", " Access- Control - Allow - Headers": "accept, content-type", " Access- Control - Allow - Max-Age": "1728000" } }).then(data => { console.log(data); setaccesscode(data.access_token); localStorage.setItem('liaccesstoken', data.access_token) }).catch(err => console.log(err))
     }
 
 

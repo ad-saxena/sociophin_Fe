@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
-import LatestPost from "../components/Posts/LatestPost";
-import LatestComment from "../components/Posts/LatestComment";
-import "../components/Posts/posts.css";
-import LatestMessage from "../components/Posts/LatestMessage";
+import LatestPost from "../components/Posts/Facebook/LatestPost";
+import LatestComment from "../components/Posts/Facebook/LatestComment";
+import "../components/Posts/Facebook/posts.css";
+import LatestMessage from "../components/Posts/Facebook/LatestMessage";
 
 import axios from "axios";
 

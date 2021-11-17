@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable array-callback-return */
 import React, { useEffect, useState } from "react";
-import dot from "../assets/dot.png";
+import dot from "../../assets/dot.png";
 // import facebook from "../assets/facebook.png";
 import { Table } from "react-bootstrap";
 import axios from "axios";
@@ -19,7 +19,7 @@ const LatestPost = ({
   const [accessid, setaccessid] = useState("");
   const [data, setData] = useState(false);
   const [other, setother] = useState([]);
-
+const accesstoken = localStorage.getItem('linkedinaccesstoken');
   useEffect(() => {
     const page_id = localStorage.getItem("fbpageid");
     const accessid = localStorage.getItem("fbaccesstoken");
@@ -41,7 +41,7 @@ const LatestPost = ({
     // if (data) {
     axios
       .get(
-        `https://graph.facebook.com/v11.0/${page_id}/posts?fields=full_picture,message,likes,reactions,created_time,permalink_url,comments&access_token=${accessid}`
+        `https://api.linkedin.com/v2/me` ,{headers: {'Authorization': `Bearer ${accesstoken}`}}
       )
       .then((response) => {
         console.log(response.data.data);

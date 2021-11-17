@@ -10,7 +10,7 @@
     cursor: pointer
 }
 .text_input{
-    background-color: #fff;
+    background-color: #e9e9e9;
     border-radius: 1em;
     padding: 0.3em 1em;
 }
@@ -50,7 +50,7 @@
 }
 
 .dm{
-    min-width:50%;
+    width:50%;
 }
 .chat_time{
     font-size: 0.7em;

@@ -17,36 +17,21 @@ import Trends from "../components/Twitter/Trends";
 function Post() {
     return (
         <>
-            <div className="h-100 d-flex mt-10 flex-column justify-content-center align-content-center">
+            <div className="h-100 d-flex flex-column justify-content-center align-content-center">
 
                 <div className="col-lg-12  container-fluid d-flex flex-wrap justify-content-between align-items-center p-0">
                     <div className="h22 col-lg-6 border bg-light my-2 rounded shadow-sm message">
                         <Timeline />
                     </div>
-                    <div className="h22 col-lg-6 border p-3 bg-light  my-2 rounded shadow-sm comment_box">
-                        <div class="d-grid mr-4">
-                        <div class="border round w4-h4 usr-im">
-                        </div>
-                        <div class="d-grid">
-                            <p class="card-text">User Name</p>
-                            <span class="spp">Details</span>
-                            </div>
-                        </div>
-                        <div class="bg-white pddd">
-                            <p>Description:</p>
-                            <p>Follower Count:</p>
-                            <p>Follow Count:</p>
-                            <p>Tweet Count:</p>
-                            <p>Listed Count:</p>
-                        </div>
+                    <div className="h22 col-lg-6 border overflow-hidden p-3 bg-light  my-2 rounded shadow-sm comment_box">
                         <User />
                     </div>
                 </div>
                 <div className="col-lg-12  container-fluid d-flex flex-wrap justify-content-between align-items-center p-0">
-                    <div className="h22 col-lg-6 border bg-light my-2 rounded shadow-sm message">
+                    <div className="h21 col-lg-6 border bg-light my-2 rounded shadow-sm message">
                         <Trends />
                     </div>
-                    <div className="h22 col-lg-6 border p-3 bg-light  my-2 rounded shadow-sm comment_box">
+                    <div className="h21 col-lg-6 border p-3 bg-light  my-2 rounded shadow-sm comment_box">
                         <Mention />
                     </div>
                 </div>

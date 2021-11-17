@@ -33,28 +33,23 @@ const LatestPost = () => {
     return (
         <>
             {user &&
-                <div class="">
-                    <div>
-                        <h4 class="colo.ad">User Details</h4>
-                    </div>
-                    <div class="card card-sh d-flex align-items-center f-d shadow">
-                        <div class="d-grid mr-4">
-                            <div class="border round w4-h4 usr-im" style={{ "backgroundImage": `url(${user.profile_image_url})` }}>
-                            </div>
-                            <div class="d-grid">
-                                <p class="card-text">{user.name}</p>
-                                <p class="card-text">{user.username}</p>
-                            </div>
+                <>
+                    <div class="d-grid mr-4">
+                        <div class="border round w4-h4 usr-im" style={{ "backgroundImage": `url(${user.profile_image_url})` }}>
                         </div>
-                        <div>
-                            <p>Description: {user.description}</p> <br />
-                            <p>Follower Count: {user.public_metrics.followers_count}</p>
-                            <p>Follow Count: {user.public_metrics.following_count}</p>
-                            <p>Tweet Count: {user.public_metrics.tweet_count}</p>
-                            <p>Listed Count: {user.public_metrics.listed_count}</p>
+                        <div class="d-grid">
+                            <p class="card-text">{user.name}</p>
+                            <span class="spp">{user.username}</span>
                         </div>
                     </div>
-                </div>
+                    <div class="bg-white pddd">
+                        <p>Description: {user.description}</p> <br />
+                        <p>Follower Count: {user.public_metrics.followers_count}</p>
+                        <p>Follow Count: {user.public_metrics.following_count}</p>
+                        <p>Tweet Count: {user.public_metrics.tweet_count}</p>
+                        <p>Listed Count: {user.public_metrics.listed_count}</p>
+                    </div>
+                </>
             }
         </>
     );

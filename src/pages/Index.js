@@ -29,7 +29,7 @@ function Index() {
             <img
               width="6%"
               className="shadow m-2"
-              src="linkedin.png"
+              src="https://cdn.svgporn.com/logos/twitter.svg"
               alt=""
               srcset=""
             />

@@ -25,7 +25,8 @@ const App = () => {
     // const urlencoded = "http%3A%2F%2Flocalhost%3A3000%2Flinkedin"
     const clientid = "782lxko1czd0k0"
     const clientsecret = "5yv3xigfyzedLIT4"
-
+    const accesstoken = "AQWlKImaP8r3jbO2Yp0cY7gxMDg87l1-nn6ZEiuNDq_eONNYwCoskFa6eEHrcMhubjkFGdCtQxL_0Gs4nCKg5DIN3NzLCbFc3P1onmBhL77Bj5w4xmvY0vADGom-OG1eV_jB5_MnBOMqjZDhmYQn7Edha5qu6lCV5xcsmfkvzF60lOqq9Hl3nM1c6zOLgc3FIAxSkc1l7tM6HpXC-6amRQ4DZEraaeqr-i9z1e3SOTApMMWaHbUNc_BFH4YR7TYzcp1yp0_oOuPOqmxyLnSebkLbE6qDlsGLWkvwdAie8rXK-jEnWPoFlu4Plmi-HwAp4HQ15C_7VcrAkITet5kLOrqYfv1UsQ"
+    localStorage.setItem('liaccesstoken', accesstoken);
 
     useEffect(() => {
         let url = window.location.href;
@@ -39,7 +40,6 @@ const App = () => {
                 getAccessToken(code)
             } catch {
                 console.log("error")
-
             }
         }
     }, [])
@@ -57,7 +57,6 @@ const App = () => {
 
     return (
         <div>
-
             <a href={link}>
                 <img
                     src={
@@ -67,7 +66,6 @@ const App = () => {
                     style={{ maxWidth: "180px", cursor: "pointer" }}
                 />
             </a>
-
             {!code && <div>No code</div>}
             {code && <div>Code: {code}</div>}
             {errorMessage && <div>{errorMessage}</div>}
